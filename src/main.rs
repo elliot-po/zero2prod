@@ -15,3 +15,16 @@ async fn main() -> Result<(), std::io::Error> {
     let listener = TcpListener::bind(address)?;
     run(listener, connection_pool)?.await
 }
+
+
+/*
+
+@ close of ch. 3...
+
+Re: the connection pool::
+See how 
+- it's est here with the sqlx call using outr config stuff
+- and then passed to Run where it wind sup in AppData
+- from which it can be pulled into diff. spots as if it were DI .
+ 
+ */
